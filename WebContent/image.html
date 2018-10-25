@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>首页</title>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/qrcode.js"></script>
+
+</head>
+<body>
+   <!-- 生成成二维码并显示 -->
+   <div id="qrcode">
+   
+   </div>
+   <script type="text/javascript">
+    
+	     // new QRCode(document.getElementById('qrcode'), 'your content');	
+		
+		  var qrcode = new QRCode('qrcode', {
+		  text: '123',
+		  width: 150,
+		  height: 150,
+		  colorDark : '#000000',
+		  colorLight : '#ffffff',
+		  correctLevel : QRCode.CorrectLevel.M
+		});
+		
+		qrcode.clear();
+		qrcode.makeCode('http://www.baidu.com?username=xiaoye&password=123 '); 
+   </script>
+</body>
+</html>
